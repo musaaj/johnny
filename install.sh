@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "Unpacking binaries"
 
 PATH="${HOME}/../usr/bin/"
