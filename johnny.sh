@@ -10,5 +10,5 @@ if [ ! -f $1 ]; then
 	exit 
 fi
 
-python johnny.py $1
+python johnny $1
 betty $1
