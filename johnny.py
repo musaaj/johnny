@@ -15,23 +15,23 @@ try:
     file = open(filename, "r")
 except FileNotFoundError:
     print("File not found")
-    sys.exit()  
+    sys.exit()
 print("working...")
 for line in file:
-    line = line.rstrip()    
-    if (line.find("if(")):
-        line = line.replace("if(", "if (")
-    if (line.find("for(")):
-        line = line.replace("for(", "for (")
-    if (line.find("while(")):
-        line = line.replace("while(", "while (")
+    line = line.rstrip()
+    if (line.find("if (")):
+        line = line.replace("if (", "if (")
+    if (line.find("for (")):
+        line = line.replace("for (", "for (")
+    if (line.find("while (")):
+        line = line.replace("while (", "while (")
     lines = lines + line + "\n"
-print(lines)
+
 try:
    file =  open(filename, "w")
 except FileNotFoundError:
     print("System failure!")
     exit()
-    
+
 file.write(lines)
 print("done")
