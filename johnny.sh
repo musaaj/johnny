@@ -9,3 +9,4 @@ if [ ! -f $1 ]; then
 fi
 
 python johnny.py $1
+betty $1

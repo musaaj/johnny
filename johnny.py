@@ -34,4 +34,4 @@ except FileNotFoundError:
     exit()
 
 file.write(lines)
-print("done")
+print("done...handing over to Betty")

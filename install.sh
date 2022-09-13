@@ -6,7 +6,7 @@ WRAPPER="johnny.sh"
 JN="jn"
 cp $JOHNNY "${PATH}${JOHNNY}"
 cp $WRAPPER "${PATH}${WRAPPER}"
-
+rm "${PATH}${JN}"
 chmod u+x "${PATH}${WARAPPER}"
 
 ln -s "${PATH}${WRAPPER}" "${PATH}${JN}"
