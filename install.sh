@@ -2,16 +2,21 @@
 
 echo "Unpacking binaries"
 
-PATH="${HOME}/../usr/bin/"
-JOHNNY="johnny.py"
-WRAPPER="johnny.sh"
+BIN_PATH="${HOME}/../usr/bin/"
+SCRIPT_PATH="${HOME}/../usr/"
+JOHNNY="johnny"
 JN="jn"
-JOHN="johnny"
-cp $JOHNNY "${PATH}${JOHNNY}"
-cp $WRAPPER "${PATH}${WRAPPER}"
-rm "${PATH}${JN}"
-chmod u+x "${PATH}${WARAPPER}"
 
-ln -s "${PATH}${WRAPPER}" "${PATH}${JN}"
-ln "${PATH}${JOHNNY} "${PATH}${JOHN}"
+mkdir "${SCRIPT_PATH}johnny"
+cp "${JOHNNY}.py" "${SCRIPT_PATH}${JOHNNY}/${JOHNNY}.py"
+cp "${JOHNNY}.sh" "${BIN_PATH}${JOHNNY}.sh"
+
+rm "${BIN_PATH}${JN}"
+rm "${BIN_PATH}${JOHNNY}"
+rm "${PATH}${JOHN}"
+
+chmod u+x "${BIN_PATH}${JOHNNY}.sh"
+
+ln -s "${BIN_PATH}${JOHNNY}.sh" "${BIN_PATH}${JN}"
+ln -s "${SCRIPT_PATH}${JOHNNY}/${JOHNNY}.py" "${BIN_PATH}${JOHNNY}"
 echo "Successfully installed"

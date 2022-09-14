@@ -10,5 +10,7 @@ if [ ! -f $1 ]; then
 	exit 
 fi
 
-python johnny $1
+JOHNNY="${HOME}/../usr/johnny/johnny.py"
+echo ${JOHNNY}
+python ${JOHNNY} $1
 betty $1
